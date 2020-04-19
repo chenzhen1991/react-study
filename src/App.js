@@ -1,13 +1,15 @@
 import React from 'react';
-import ContextPage from './pages/ContextPage';
-import { Button } from 'antd';
+// import ContextPage from './pages/ContextPage';
+// import AntdFormPage from './pages/AntdFormPage';
+import MyForm from './pages/MyForm';
 
 function App() {
   return (
     <div>
       App
-      <ContextPage />
-      <Button type="primary">rrrrrr</Button>
+      {/* <ContextPage /> */}
+      {/* <AntdFormPage /> */}
+      <MyForm />
     </div>
   );
 }
