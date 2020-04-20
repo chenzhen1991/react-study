@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Form,{Field} from '../components/my-rc-field-form';
 import Input from "../components/my-rc-field-form/Input";
 
@@ -21,18 +21,43 @@ export default function MyForm() {
     console.log("form", form); //sy-log
     form.setFieldsValue({username: "default"});
   });
+
+  const [show, setShow] = useState(true)
     return (
         <div>
             <h3>MyRCFieldForm</h3>
+            <button onClick={() => setShow(!show)}>删除一个field</button>
             <Form form={form} onFinish={onFinish} onFinishFailed={onFinishFailed}>
-              <Field name="username" rules={[nameRules]}>
-                <Input placeholder="input UR Username" />
-              </Field>
+                {show ? <Field name="username" rules={[nameRules]}>
+                    <Input placeholder="input UR Username" />
+                </Field> : null}
               <Field name="password" rules={[passworRules]}>
                 <Input placeholder="input UR Password" />
               </Field>
               <button>Submit</button>
-            </Form> 
+            </Form>
         </div>
     )
 }
+
+// class MyForm extends Component {
+//
+//     render() {
+//         return (
+//             <div>
+//                 <h3>MyRCFieldForm</h3>
+//                 <Form form={form} onFinish={onFinish} onFinishFailed={onFinishFailed}>
+//                   <Field name="username" rules={[nameRules]}>
+//                     <Input placeholder="input UR Username" />
+//                   </Field>
+//                   <Field name="password" rules={[passworRules]}>
+//                     <Input placeholder="input UR Password" />
+//                   </Field>
+//                   <button>Submit</button>
+//                 </Form>
+//             </div>
+//         );
+//     }
+// }
+//
+// export default MyForm;

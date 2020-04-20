@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 class FormStore {
     constructor() {
@@ -31,12 +31,16 @@ class FormStore {
             ...this.store,
             ...newStore
         }
+        console.log(newStore)
 
         this.fieldEntities.forEach(entity => {
+            // console.log(entity)
             const {name} = entity.props;
-            if(this.getFieldValue(name) !== undefined){
-                entity.onStoreChange();
-            }
+            Object.keys(newStore).forEach((store) => {
+                if(store === name) {
+                    entity.onStoreChange();
+                }
+            })
         })
     }
 
@@ -85,13 +89,26 @@ class FormStore {
 }
 
 export default function useForm(form) {
-    let res;
-    if (form) {
-        res = form
-    } else {
-        const formStore = new FormStore();
-        res = formStore.getForm();
+    // let res;
+    // if (form) {
+    //     res = form
+    // } else {
+    //     const formStore = new FormStore();
+    //     res = formStore.getForm();
+    // }
+    //
+    // return [res]
+
+    //  使用useRef
+    const formRef = React.useRef();
+    if(!formRef.current) {
+        if(form){
+            formRef.current = form;
+        } else {
+            const formStore = new FormStore();
+            formRef.current = formStore.getForm();
+        }
     }
 
-    return [res]
+    return [formRef.current]
 }

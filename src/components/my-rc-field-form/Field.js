@@ -6,10 +6,16 @@ export default class Field extends Component {
 
     componentDidMount() {
         const {registerField} = this.context;
-        console.log(this.context);
-        
+        // console.log(this.context);
         registerField(this);
+        // this.cancleRegisterField = registerField(this);
     }
+
+    // componentWillUnmount() {
+    //     if(this.cancleRegisterField){
+    //         this.cancleRegisterField()
+    //     }
+    // }
 
     onStoreChange = () => {
         this.forceUpdate();
@@ -30,9 +36,7 @@ export default class Field extends Component {
 
     render() {
         const {children} = this.props;
-        console.log(children);
-        
-
+        // console.log(children);
         const returnChildNode = React.cloneElement(children, this.getControlled());
         return returnChildNode;
         // return <div>456</div>
