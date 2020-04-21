@@ -7,15 +7,15 @@ export default class Field extends Component {
     componentDidMount() {
         const {registerField} = this.context;
         // console.log(this.context);
-        registerField(this);
-        // this.cancleRegisterField = registerField(this);
+        // registerField(this);
+        this.cancleRegisterField = registerField(this);
     }
 
-    // componentWillUnmount() {
-    //     if(this.cancleRegisterField){
-    //         this.cancleRegisterField()
-    //     }
-    // }
+    componentWillUnmount() {
+        if(this.cancleRegisterField){
+            this.cancleRegisterField()
+        }
+    }
 
     onStoreChange = () => {
         this.forceUpdate();

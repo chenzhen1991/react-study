@@ -8,7 +8,13 @@ class FormStore {
     }
 
     registerField = entity => {
+        console.log(entity)
         this.fieldEntities.push(entity)
+
+        return () => {
+            this.fieldEntities = this.fieldEntities.filter(item => item !== entity)
+            delete this.store[entity.props.name]
+        }
     }
 
     setCallback = callback => {
@@ -31,7 +37,6 @@ class FormStore {
             ...this.store,
             ...newStore
         }
-        console.log(newStore)
 
         this.fieldEntities.forEach(entity => {
             // console.log(entity)
@@ -65,6 +70,7 @@ class FormStore {
     }
 
     submit = () => {
+        console.log(this.fieldEntities)
         let err = this.validate();
 
         const {onFinish, onFinishFailed} = this.callbacks;
