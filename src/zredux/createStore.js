@@ -1,4 +1,7 @@
-export default function createStore (reducer) {
+export default function createStore (reducer, enhancer) {
+    if(enhancer) {
+        return enhancer(createStore)(reducer)
+    }
     let currentState;
     let currentListeners = [];
     function getState(){
@@ -15,7 +18,9 @@ export default function createStore (reducer) {
         currentListeners.push(listener)
 
         return () => {
-            currentListeners = []
+            // currentListeners = []
+            var index = currentListeners.indexOf(listener)
+            currentListeners.splice(index, 1)
         }
     }
 
