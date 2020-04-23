@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from "redux";
+// import {connect} from 'react-redux';
+import {connect} from '../reactRedux/Provider';
+// import {bindActionCreators} from "redux";
+import {bindActionCreators} from "../zredux/bindActionCreators";
 
 
 class ReactReduxPage extends Component {
