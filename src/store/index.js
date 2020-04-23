@@ -1,9 +1,9 @@
-import {createStore, applyMiddleware} from "redux";
+import {createStore, combineReducers} from "redux";
 // import { createStore, applyMiddleware, combineReducers } from "../zredux";
 
-import thunk from 'redux-thunk';
-import logger from 'redux-logger';
-import rdPromise from 'redux-promise';
+// import thunk from 'redux-thunk';
+// import logger from 'redux-logger';
+// import rdPromise from 'redux-promise';
 // import isPromise from 'is-promise';
 // import {isFSA} from 'flux-standard-action';
 
@@ -20,7 +20,7 @@ export const cunterReducer = (state = 0, {type, payload = 1}) => {
     };
 };
 
-const store = createStore(cunterReducer, applyMiddleware(thunk, logger, rdPromise));
+const store = createStore(combineReducers({count: cunterReducer}));
 
 export default store;
 

@@ -1,5 +1,5 @@
 import React, {createContext, useContext, useLayoutEffect, useReducer} from 'react';
-import {bindActionCreators} from 'redux'
+import {bindActionCreators} from 'redux';
 
 const Context = React.createContext();
 
@@ -14,7 +14,6 @@ export const connect = (
     const store = useContext(Context);
     const {getState, dispatch, subscribe} = store;
     const stateProps = mapStateToProps(getState())
-    console.log(stateProps)
 
     let dispatchProps = {dispatch}
 
@@ -30,7 +29,7 @@ export const connect = (
                 unsubscribe()
             }
         }
-    }, [])
+    }, [subscribe])
 
     if(typeof mapDispatchToProps === 'function'){
         dispatchProps = mapDispatchToProps(dispatch)
@@ -39,4 +38,38 @@ export const connect = (
     }
 
     return <WrapperComponent {...props} {...stateProps} {...dispatchProps} />
+}
+
+export function useSelector(selector){
+    const store = useStore()
+    const {getState, subscribe} = store
+    const selectState = selector(getState())
+
+    const [, forceUpdate] = useReducer(x => x+1, 0)
+
+    useLayoutEffect(() => {
+        const unsubscribe = subscribe(() => {
+            forceUpdate()
+        })
+
+        return () => {
+            if(unsubscribe){
+                unsubscribe()
+            }
+        }
+    }, [store, subscribe])
+
+    return selectState
+}
+
+export function useDispatch(){
+    const store = useStore()
+    return store.dispatch;
+}
+
+export function useStore() {
+    const store = useContext(Context);
+    console.log(store);
+    
+    return store;
 }

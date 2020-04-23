@@ -1,7 +1,9 @@
 import React from 'react';
 // import ReduxPage from './pages/ReduxPage'
 // import HooksPage from './pages/HooksPage'
-import ReactReduxPage from './pages/ReactReduxPage';
+// import ReactReduxPage from './pages/ReactReduxPage';
+// import ReactReduxHooksPage from './pages/ReactReduxHooksPage';
+import ReactRouterPage from './pages/ReactRouterPage';
 
 function App() {
   
@@ -10,7 +12,9 @@ function App() {
       App
       {/*<ReduxPage />*/}
       {/*<HooksPage />*/}
-      <ReactReduxPage />
+      {/* <ReactReduxPage /> */}
+      {/* <ReactReduxHooksPage /> */}
+      <ReactRouterPage />
     </div>
   );
 }
