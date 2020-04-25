@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
   BrowserRouter as Router, 
   Link, 
@@ -8,7 +8,7 @@ import {
   useLocation,
   useRouteMatch,
   useParams,
-  // withRouter
+  withRouter
 } from 'react-router-dom';
 // import {
 //   BrowserRouter as Router, 
@@ -43,7 +43,7 @@ function App() {
           <Route path='/login' component={Login}></Route>
           {/* 动态路由 */}
           <Route path='/product/:id' component={Product}></Route>
-          {/* <Route path='/eee/:id' component={EEE}></Route> */}
+          <Route path='/eee/:id' component={EEE}></Route>
           <Route component={NotFount}></Route>
         {/* </Switch> */}
       </Router>
@@ -62,18 +62,18 @@ function Product(props){
 
   console.log('props', history, location, match, params);
   return(
-  <div>Product === {id}</div>
+  <div>Producthhhhh === {id}</div>
   )
 }
 
-// @withRouter
-// class EEE extends Component{
-//   render(){
-//     console.log(this.props);
-//     return (
-//       <div>Product === 1</div>
-//     )
-//   }
-// }
+@withRouter
+class EEE extends Component{
+  render(){
+    console.log(this.props);
+    return (
+      <div>Product === 1</div>
+    )
+  }
+}
 
 export default App;
