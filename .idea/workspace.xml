@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9d94c235-faa7-4e0f-a0fc-e8fcc574833d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ahsHCHU2evqNRtv65QTWA0UgIo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d94c235-faa7-4e0f-a0fc-e8fcc574833d" name="Default Changelist" comment="" />
+      <created>1587199069944</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587199069944</updated>
+      <workItem from="1587199072833" duration="536000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="580" y="174" key="FileChooserDialogImpl" timestamp="1587199167336">
+      <screen x="0" y="0" width="1600" height="866" />
+    </state>
+    <state x="580" y="174" key="FileChooserDialogImpl/0.0.1600.866@0.0.1600.866" timestamp="1587199167336" />
+    <state x="663" y="323" width="273" height="291" key="Github.ShareDialog" timestamp="1587199391531">
+      <screen x="0" y="0" width="1600" height="866" />
+    </state>
+    <state x="663" y="323" width="273" height="291" key="Github.ShareDialog/0.0.1600.866@0.0.1600.866" timestamp="1587199391531" />
+    <state x="301" y="75" key="SettingsEditor" timestamp="1587199370640">
+      <screen x="0" y="0" width="1600" height="866" />
+    </state>
+    <state x="301" y="75" key="SettingsEditor/0.0.1600.866@0.0.1600.866" timestamp="1587199370640" />
+    <state x="630" y="224" key="svn.repositoryBrowser" timestamp="1587199157574">
+      <screen x="0" y="0" width="1600" height="866" />
+    </state>
+    <state x="630" y="224" key="svn.repositoryBrowser/0.0.1600.866@0.0.1600.866" timestamp="1587199157574" />
+  </component>
+</project>
