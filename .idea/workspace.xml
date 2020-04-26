@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d94c235-faa7-4e0f-a0fc-e8fcc574833d" name="Default Changelist" comment="" />
+    <list default="true" id="920d4c19-a9d9-4ba5-ac23-aa5b634eaad2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/PrivateRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/z-react-router-dom/Prompt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/z-react-router-dom/Redirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/z-react-router-dom/Redirect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/z-react-router-dom/Route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/z-react-router-dom/Route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/z-react-router-dom/Switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/z-react-router-dom/Switch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/z-react-router-dom/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/z-react-router-dom/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/z-react-router-dom/withRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/z-react-router-dom/withRouter.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -28,42 +51,60 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9d94c235-faa7-4e0f-a0fc-e8fcc574833d" name="Default Changelist" comment="" />
+      <changelist id="920d4c19-a9d9-4ba5-ac23-aa5b634eaad2" name="Default Changelist" comment="" />
       <created>1587199069944</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587199069944</updated>
       <workItem from="1587199072833" duration="536000" />
+      <workItem from="1587887095601" duration="8739000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="580" y="174" key="FileChooserDialogImpl" timestamp="1587199167336">
-      <screen x="0" y="0" width="1600" height="866" />
-    </state>
-    <state x="580" y="174" key="FileChooserDialogImpl/0.0.1600.866@0.0.1600.866" timestamp="1587199167336" />
-    <state x="663" y="323" width="273" height="291" key="Github.ShareDialog" timestamp="1587199391531">
-      <screen x="0" y="0" width="1600" height="866" />
-    </state>
-    <state x="663" y="323" width="273" height="291" key="Github.ShareDialog/0.0.1600.866@0.0.1600.866" timestamp="1587199391531" />
-    <state x="301" y="75" key="SettingsEditor" timestamp="1587199370640">
-      <screen x="0" y="0" width="1600" height="866" />
-    </state>
-    <state x="301" y="75" key="SettingsEditor/0.0.1600.866@0.0.1600.866" timestamp="1587199370640" />
-    <state x="630" y="224" key="svn.repositoryBrowser" timestamp="1587199157574">
-      <screen x="0" y="0" width="1600" height="866" />
-    </state>
-    <state x="630" y="224" key="svn.repositoryBrowser/0.0.1600.866@0.0.1600.866" timestamp="1587199157574" />
+    <state x="580" y="174" key="FileChooserDialogImpl" />
+    <state x="580" y="174" key="FileChooserDialogImpl/0.0.1600.866@0.0.1600.866" />
+    <state x="663" y="323" width="273" height="291" key="Github.ShareDialog" />
+    <state x="663" y="323" width="273" height="291" key="Github.ShareDialog/0.0.1600.866@0.0.1600.866" />
+    <state x="301" y="75" key="SettingsEditor" />
+    <state x="301" y="75" key="SettingsEditor/0.0.1600.866@0.0.1600.866" />
+    <state x="630" y="224" key="svn.repositoryBrowser" />
+    <state x="630" y="224" key="svn.repositoryBrowser/0.0.1600.866@0.0.1600.866" />
   </component>
 </project>

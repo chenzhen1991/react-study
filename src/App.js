@@ -1,29 +1,32 @@
 import React, {Component} from 'react';
 import {
-  BrowserRouter as Router, 
-  Link, 
-  Route, 
-  // Switch,
+  BrowserRouter as Router,
+  Link,
+  Route,
+  Switch,
   useHistory,
   useLocation,
   useRouteMatch,
   useParams,
-  withRouter
+  withRouter,
+  Prompt
 } from 'react-router-dom';
 // import {
-//   BrowserRouter as Router, 
-//   Link, 
-//   Route, 
-//   // Switch,
+//   BrowserRouter as Router,
+//   Link,
+//   Route,
+//   Switch,
 //   useHistory,
 //   useLocation,
 //   useRouteMatch,
-//   useParams
+//   useParams,
+//   withRouter
 // } from './z-react-router-dom';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import User from './pages/User';
 import NotFount from './pages/NotFount';
+import PrivateRoute from './pages/PrivateRoute';
 
 function App() {
   return (
@@ -32,20 +35,23 @@ function App() {
         <Link to='/'>首页</Link>
         <Link to='/user'>用户</Link>
         <Link to='/login'>登录</Link>
+        <Link to='/product/123'>产品</Link>
+        <Link to='/eee/123'>任意</Link>
 
-        {/* <Switch> */}
-          <Route path='/' 
+         <Switch>
+          <Route exact path='/'
             // children={() => <div>Homechildren</div>} 
             component={Home} 
             // render={() => <div>render</div>}
           ></Route>
-          <Route path='/user' component={User}></Route>
+           <PrivateRoute path='/user' component={User}/>
+          {/*<Route path='/user' component={User}></Route>*/}
           <Route path='/login' component={Login}></Route>
           {/* 动态路由 */}
           <Route path='/product/:id' component={Product}></Route>
           <Route path='/eee/:id' component={EEE}></Route>
           <Route component={NotFount}></Route>
-        {/* </Switch> */}
+         </Switch>
       </Router>
     </div>
   );
@@ -71,7 +77,11 @@ class EEE extends Component{
   render(){
     console.log(this.props);
     return (
-      <div>Product === 1</div>
+      <div>
+          <h3>3333</h3>
+          <Link to='/'>go home</Link>
+          <Prompt when={true} message='你确定要离开吗'/>
+      </div>
     )
   }
 }

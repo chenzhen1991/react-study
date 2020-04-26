@@ -9,6 +9,7 @@ import {
   useRouteMatch,
   useParams
 } from './hooks';
+import withRouter from './withRouter';
 
 export {
     BrowserRouter,
@@ -19,5 +20,6 @@ export {
     useHistory,
     useLocation,
     useRouteMatch,
-    useParams
+    useParams,
+    withRouter
 }
