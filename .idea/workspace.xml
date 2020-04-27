@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="920d4c19-a9d9-4ba5-ac23-aa5b634eaad2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/PrivateRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/z-react-router-dom/Prompt.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/z-react-router-dom/Redirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/z-react-router-dom/Redirect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/z-react-router-dom/Route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/z-react-router-dom/Route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/z-react-router-dom/Switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/z-react-router-dom/Switch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/z-react-router-dom/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/z-react-router-dom/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/z-react-router-dom/withRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/z-react-router-dom/withRouter.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,8 +66,24 @@
       <option name="presentableId" value="Default" />
       <updated>1587199069944</updated>
       <workItem from="1587199072833" duration="536000" />
-      <workItem from="1587887095601" duration="8739000" />
+      <workItem from="1587887095601" duration="8823000" />
+      <workItem from="1587952141588" duration="3708000" />
     </task>
+    <task id="LOCAL-00001" summary="react-router源码解析">
+      <created>1587897145899</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587897145900</updated>
+    </task>
+    <task id="LOCAL-00002" summary="react-router privateRoute路由守卫">
+      <created>1587978703185</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587978703186</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,11 +94,18 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="react-router源码解析" />
+    <MESSAGE value="react-router privateRoute路由守卫" />
+    <option name="LAST_COMMIT_MESSAGE" value="react-router privateRoute路由守卫" />
   </component>
   <component name="WindowStateProjectService">
     <state x="580" y="174" key="FileChooserDialogImpl" />
