@@ -49,7 +49,7 @@ function App() {
           <Route path='/login' component={Login}></Route>
           {/* 动态路由 */}
           <Route path='/product/:id' component={Product}></Route>
-          <Route path='/eee/:id' component={EEE}></Route>
+          {/* <Route path='/eee/:id' component={EEE}></Route> */}
           <Route component={NotFount}></Route>
          </Switch>
       </Router>
@@ -72,18 +72,18 @@ function Product(props){
   )
 }
 
-@withRouter
-class EEE extends Component{
-  render(){
-    console.log(this.props);
-    return (
-      <div>
-          <h3>3333</h3>
-          <Link to='/'>go home</Link>
-          <Prompt when={true} message='你确定要离开吗'/>
-      </div>
-    )
-  }
-}
+// @withRouter
+// class EEE extends Component{
+//   render(){
+//     console.log(this.props);
+//     return (
+//       <div>
+//           <h3>3333</h3>
+//           <Link to='/'>go home</Link>
+//           <Prompt when={true} message='你确定要离开吗'/>
+//       </div>
+//     )
+//   }
+// }
 
 export default App;
