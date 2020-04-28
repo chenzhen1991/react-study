@@ -7,7 +7,7 @@ const LogoutService = {
                 } else {
                     reject({err: {msg: '退出登陆失败,请稍后再试'}})
                 }
-            }, 1000)
+            }, 11000)
         })
     }
 };

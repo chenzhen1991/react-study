@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="920d4c19-a9d9-4ba5-ac23-aa5b634eaad2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/action/const.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/userAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/logout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/loginReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/logout.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588057490408</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="最佳项目实践  redux react-redux  redux-thunk">
+      <created>1588069614454</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588069614455</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,7 +122,8 @@
     <MESSAGE value="react-router源码解析" />
     <MESSAGE value="react-router privateRoute路由守卫" />
     <MESSAGE value="react-router xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="react-router xml" />
+    <MESSAGE value="最佳项目实践  redux react-redux  redux-thunk" />
+    <option name="LAST_COMMIT_MESSAGE" value="最佳项目实践  redux react-redux  redux-thunk" />
   </component>
   <component name="WindowStateProjectService">
     <state x="580" y="174" key="FileChooserDialogImpl" />
