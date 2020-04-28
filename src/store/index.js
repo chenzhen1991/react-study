@@ -1,20 +1,10 @@
-import {createStore, combineReducers} from 'redux';
+import {createStore, combineReducers, applyMiddleware} from 'redux';
+import {loginReducer} from "./loginReducer";
+import thunk from 'redux-thunk';
 
-const userInit = {
-    isLogin: false,
-    username: ""
-}
-
-// 定义修改规则
-export const loginReducer = (state = {userInit}, {type}) => {
-    switch (type) {
-        case 'LOGIN_SUCCESS':
-           return {...state, isLogin: true, username: "xiaoming"};
-        default:
-            return state;
-    }
-}
-
-const store = createStore(combineReducers({user:loginReducer}))
+const store = createStore(
+    combineReducers({user:loginReducer}),
+    applyMiddleware(thunk)
+)
 
 export default store;
