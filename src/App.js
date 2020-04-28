@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Link,
@@ -8,8 +8,8 @@ import {
   useLocation,
   useRouteMatch,
   useParams,
-  withRouter,
-  Prompt
+  // withRouter,
+  // Prompt
 } from 'react-router-dom';
 // import {
 //   BrowserRouter as Router,
