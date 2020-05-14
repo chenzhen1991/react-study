@@ -57,11 +57,11 @@
 
 import React from './zReact';
 import ReactDom,{useState} from './zReact/react-dom';
-import Component from './zReact/component'
+// import Component from './zReact/component'
 
 // // 函数式组件
 function FunComponent({name}){
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(1)
     return (<div>
         <p>函数式组件：{name} 数量{count}</p>
         {count % 2 ? <button onClick={()=>{
@@ -71,29 +71,29 @@ function FunComponent({name}){
 }
 //
 // // class组件
-class ClassComponent extends Component{
-    static defaultProps = {
-        text: '默认参数'
-    }
-    render(){
-        return(
-            <div>
-                classComponent:
-                {this.props.name}
-                <span>{this.props.text}</span>
-            </div>
-        )
-    }
-}
+// class ClassComponent extends Component{
+//     static defaultProps = {
+//         text: '默认参数'
+//     }
+//     render(){
+//         return(
+//             <div>
+//                 classComponent:
+//                 {this.props.name}
+//                 <span>{this.props.text}</span>
+//             </div>
+//         )
+//     }
+// }
 const jsx = <div className='border'>
-    <p>全栈学习</p>
-    <a href="http:baidu.com">百度</a>
+    {/* <p>全栈学习</p>
+    <a href="http:baidu.com">百度</a> */}
     <FunComponent name='组件初体验' />
-    <ClassComponent name='class组件' text='传递的值'/>
-    <>
+    {/* <ClassComponent name='class组件' text='传递的值'/> */}
+    {/* <>
         <h1>fragment</h1>
         <h1>测试</h1>
-    </>
+    </> */}
 
     {/*    [1,2,3].map(item => {*/}
     {/*        return(*/}
