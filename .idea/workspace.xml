@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="920d4c19-a9d9-4ba5-ac23-aa5b634eaad2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/zReact/component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/zReact/const.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/zReact/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/zReact/react-dom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zReact/const.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/zReact/const.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zReact/react-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/zReact/react-dom.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -79,7 +77,9 @@
       <workItem from="1588210612828" duration="3052000" />
       <workItem from="1588730710554" duration="1083000" />
       <workItem from="1589186261791" duration="1335000" />
-      <workItem from="1589244939210" duration="13648000" />
+      <workItem from="1589244939210" duration="15786000" />
+      <workItem from="1589340267975" duration="9768000" />
+      <workItem from="1589440396938" duration="6622000" />
     </task>
     <task id="LOCAL-00001" summary="react-router源码解析">
       <created>1587897145899</created>
@@ -123,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588129282278</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="react 源码 初体验">
+      <created>1589270475833</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589270475833</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +155,8 @@
     <MESSAGE value="react-router xml" />
     <MESSAGE value="最佳项目实践  redux react-redux  redux-thunk" />
     <MESSAGE value="最佳项目实践  添加router" />
-    <option name="LAST_COMMIT_MESSAGE" value="最佳项目实践  添加router" />
+    <MESSAGE value="react 源码 初体验" />
+    <option name="LAST_COMMIT_MESSAGE" value="react 源码 初体验" />
   </component>
   <component name="WindowStateProjectService">
     <state x="580" y="174" key="FileChooserDialogImpl" />

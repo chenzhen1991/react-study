@@ -56,20 +56,21 @@
 // import ReactDom from 'react-dom';
 
 import React from './zReact';
-import ReactDom from './zReact/react-dom';
+import ReactDom,{useState} from './zReact/react-dom';
 import Component from './zReact/component'
 
-// 函数式组件
+// // 函数式组件
 function FunComponent({name}){
+    const [count, setCount] = useState(0)
     return (<div>
-        <p>函数式组件：{name}</p>
-        <button onClick={()=>{
-            console.log('点击')
-        }}>按钮</button>
+        <p>函数式组件：{name} 数量{count}</p>
+        {count % 2 ? <button onClick={()=>{
+            setCount(count+1)
+        }}>按钮</button> : <div>{count}</div>}
     </div>)
 }
-
-// class组件
+//
+// // class组件
 class ClassComponent extends Component{
     static defaultProps = {
         text: '默认参数'
@@ -93,13 +94,13 @@ const jsx = <div className='border'>
         <h1>fragment</h1>
         <h1>测试</h1>
     </>
-    {
-        [1,2,3].map(item => {
-            return(
-                <div key={item}>数组元素：{item}</div>
-            )
-        })
-    }
+
+    {/*    [1,2,3].map(item => {*/}
+    {/*        return(*/}
+    {/*            <div key={item}>数组元素：{item}</div>*/}
+    {/*        )*/}
+    {/*    })*/}
+    {/*}*/}
 </div>;
 
 ReactDom.render(jsx,document.getElementById('root'))
