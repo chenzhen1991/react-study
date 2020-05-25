@@ -1,9 +1,15 @@
 import {TEXT} from './const'
 
-function createElement(type, props, ...children) {
-    if(props){
-        delete props.__self;
-        delete props.__source;
+function createElement(type, config, ...children) {
+    if(config){
+        delete config.__self;
+        delete config.__source;
+    }
+    let props = {};
+    for(let k in config){
+        if(k !== 'key') {
+            props[k] = config[k]
+        }
     }
     let defaultProps = {}
     if(type && type.defaultProps){
@@ -11,6 +17,7 @@ function createElement(type, props, ...children) {
     }
     return {
         type,
+        key:config.key || '',
         props: {
             ...defaultProps,
             ...props,

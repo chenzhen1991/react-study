@@ -147,7 +147,152 @@ function updateNode(node, preVal, nextVal){
         })
 }
 
-function reconcileChildren(workInProgressFiber, children) {
+function placeChild(newFiber, lastPlacedIndex, newIdx, shouldTrackSideEffects) {
+    //标识了在当前父节点中的位置下标
+    newFiber.index = newIdx;
+    if(!shouldTrackSideEffects){
+        return lastPlacedIndex
+    }
+    let base = newFiber.base;
+    let oldIndex = base.index
+    if(oldIndex < lastPlacedIndex){
+        return lastPlacedIndex
+    } else {
+        return oldIndex
+    }
+}
+
+function reconcileChildren(workInProgressFiber, newChildren){
+    let previousNewFiber = null;
+    let oldFiber = workInProgressFiber.base && workInProgressFiber.base.child;
+    let shouldTrackSideEffects = true;
+    if(!oldFiber){
+        // 代表初次渲染
+        shouldTrackSideEffects = false
+    }
+    let lastPlacedIndex = 0;
+    let newIdx = 0;
+    let nextOldFiber = null;
+
+    for(;oldFiber !== null && newIdx< newChildren.length; newIdx++){
+        let newChild = newChildren[newIdx];
+        if(oldFiber.index > newIdx){
+            nextOldFiber = oldFiber
+            oldFiber = null
+        } else {
+            nextOldFiber = oldFiber.sibling
+        }
+        if(newChild.type !== oldFiber.type || newChild.key !== oldFiber.key) {
+            break;
+        }
+        const newFiber = {
+            type: newChild.type,
+            key: newChild.key,
+            props:newChild.props,
+            node: oldFiber.node,
+            base: oldFiber,
+            return: workInProgressFiber,
+            effectTag: UPDATE
+        }
+
+        lastPlacedIndex = placeChild(newFiber, lastPlacedIndex, newIdx, shouldTrackSideEffects)
+
+        if(previousNewFiber === null) {
+            workInProgressFiber.child = newFiber
+        } else {
+            previousNewFiber.sibling = newFiber
+        }
+
+        previousNewFiber = newFiber
+    }
+
+    if(oldFiber === null){
+        for(;newIdx< newChildren.length; newIdx++){
+            let newChild = newChildren[newIdx];
+            const newFiber = {
+                type: newChild.type,
+                key: newChild.key,
+                props:newChild.props,
+                node: null,
+                base: null,
+                return: workInProgressFiber,
+                effectTag: PLACEMENT
+            }
+            lastPlacedIndex = placeChild(newFiber, lastPlacedIndex, newIdx)
+            if(previousNewFiber === null) {
+                workInProgressFiber.child = newFiber
+            } else {
+                previousNewFiber.sibling = newFiber
+                oldFiber = nextOldFiber
+            }
+
+            previousNewFiber = newFiber
+        }
+    }
+
+    const existingChildren = mapRemainingChildren(workInProgressFiber, oldFiber)
+    for(;newIdx< newChildren.length; newIdx++) {
+        let newChild = newChildren[newIdx];
+        let newFiber = {
+            type: newChild.type,
+            key: newChild.key,
+            props:newChild.props,
+            // node: null,
+            // base: null,
+            return: workInProgressFiber,
+            // effectTag: PLACEMENT
+        }
+        const matchedFiber = existingChildren.get(newChild.key===null ? newIdx:newChild.key )
+        if(matchedFiber){
+            newFiber = {
+                ...newFiber,
+                node: matchedFiber.node,
+                base: matchedFiber,
+                effectTag: UPDATE
+            }
+            shouldTrackSideEffects && existingChildren.delete(newChild.key===null ? newIdx:newChild.key )
+        } else {
+            newFiber = {
+                ...newFiber,
+                node: null,
+                base: null,
+                effectTag: PLACEMENT
+            }
+        }
+        lastPlacedIndex = placeChild(newFiber, lastPlacedIndex, newIdx, shouldTrackSideEffects)
+        if(previousNewFiber === null) {
+            workInProgressFiber.child = newFiber
+        } else {
+            previousNewFiber.sibling = newFiber
+        }
+
+        previousNewFiber = newFiber
+    }
+
+    if(shouldTrackSideEffects) {
+        existingChildren.forEach((child => {
+            deletions.push({
+                ...child,
+                effectTag:DELETIONS
+            })
+        }))
+    }
+}
+
+function mapRemainingChildren(returnFiber, currentFirstChild) {
+    const existingChildren = new Map();
+    let existingChild = currentFirstChild
+    while(existingChild){
+        if(existingChild.key) {
+            existingChild.set(existingChild.key || existingChild.index, existingChild)
+        }
+        existingChild = existingChild.sibling
+    }
+
+    return existingChildren;
+}
+
+function reconcileChildren_old(workInProgressFiber, children) {
     // 给children构建fiber架构
     let oldFiber = workInProgressFiber.base && workInProgressFiber.base.child;
     let prevSibling = null;
@@ -271,6 +416,27 @@ function commitRoot() {
     wipRoot = null;
 }
 
+function getHostSibling(fiber){
+    let sibling = fiber.return.child
+    while(sibling) {
+        if(fiber.index + 1 === sibling.index && sibling.effectTag === UPDATE) {
+            return sibling.node;
+        }
+        sibling = sibling.sliding
+    }
+    return null;
+}
+
+function insertOrAppend(fiber,parentNode){
+    let before = getHostSibling(fiber);
+    let node = fiber.node;
+    if(before){
+        parentNode.insertBefore(node, before)
+    } else {
+        parentNode.appendChild(node)
+    }
+}
+
 function commitWork(fiber){
     if(!fiber){
         return;
@@ -282,8 +448,9 @@ function commitWork(fiber){
     //ParentNode是指fiber的父node
     const parentNode = parentNodeFiber.node;
     if(fiber.effectTag === PLACEMENT && fiber.node !== null) {
-        parentNode.appendChild(fiber.node)
+        // parentNode.appendChild(fiber.node)
         // console.log(parentNode,fiber.node)
+        insertOrAppend(fiber,parentNode)
     } else if(fiber.effectTag === UPDATE && fiber.node !== null){
         // 更新
         updateNode(fiber.node, fiber.base.props, fiber.props)
